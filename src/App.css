@@ -1,38 +1,583 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Creepster&family=Nosifer&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  top: 0;
+  text-decoration: none;
+}
+.container {
+  background: url("../src/assets/laptop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  background-color: rgba(108, 132, 160, 0.58);
+  height: 100%;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.header h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: whitesmoke;
+}
+.header .cognifyz {
+  font-size: 50px;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-shadow: 2px 3px 3px rgba(152, 150, 150, 0.9);
+}
+.header .title {
+  margin-top: 5%;
+  font-size: 70px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: rgb(38, 38, 128);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+}
+.header p {
+  margin-top: 2%;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(8, 8, 41);
+  padding-left: 5px;
+}
+.header span .span {
+  text-decoration: none;
+  color: rgb(11, 32, 72);
+  font-weight: 600;
+}
+.header button {
+  margin-top: 5%;
+  text-align: center;
+  width: 15%;
+  padding: 30px 20px;
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 26px;
+  color: white;
+  background-color: rgb(30, 30, 118);
+  cursor: pointer;
+}
+.header button:hover {
+  background-color: rgb(38, 38, 128);
+}
+.overview {
+  display: flex;
+  height: 100vh;
+}
+.overview .about {
+  width: 70%;
+  height: 70%;
+  margin-top: 8%;
+  margin-left: 5%;
+  background-image: url("../src/assets/about.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.overview .about-content {
+  width: 90%;
+  margin: 8%;
+}
+.overview .about-content h2 {
+  font-size: 70px;
+  font-family: "Roboto", sans-serif;
+  color: rgba(39, 98, 216, 1);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+}
+.overview .about-content p {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(38, 38, 128);
+  margin-top: 25px;
+}
+.overview .about-content .duration {
+  color: rgb(39, 39, 216);
+}
+.overview .about-content .duration span {
+  color: rgba(39, 38, 38);
+}
+
+.join-us {
+  display: flex;
+  height: 100vh;
+}
+.join-us .join {
+  width: 70%;
+  height: 70%;
+  margin-top: 8%;
+  background-image: url("../src/assets/join.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.join-us .join-content {
+  width: 90%;
+  margin: 12% 6%;
+}
+.join-us .join-content h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 70px;
+  color: rgba(39, 98, 216, 1);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+}
+.join-us .join-content ul {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(38, 38, 128);
+  margin-top: 25px;
+  margin-left: 50px;
+}
+.skills {
+  display: flex;
+  height: 100vh;
+  background-color: rgba(223, 219, 219, 0.5);
+}
+.skills .qualification {
+  width: 70%;
+  height: 70%;
+  margin-top: 8%;
+  margin-left: 5%;
+  background-image: url("../src/assets/qualification.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.skills .skill-content {
+  width: 100%;
+  margin: 8%;
+}
+.skills .skill-content h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 70px;
+  color: rgba(39, 98, 216, 1);
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+}
+.skills .skill-content ul {
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(38, 38, 128);
+  margin-top: 25px;
+  margin-left: 40px;
+}
+.apply {
+  height: 100vh;
+  background: url("../src/assets/apply.jpg") no-repeat center center/cover;
+}
+.applynow {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: rgba(108, 132, 160, 0.58);
+  height: 100vh;
+}
+.applynow h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 45px;
+}
+.applynow button {
+  margin-top: 25%;
+  text-align: center;
+  padding: 15px;
+  outline: none;
+  border: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
   color: white;
+  background-color: rgb(30, 30, 118);
+  cursor: pointer;
+}
+.applynow button:hover {
+  background-color: rgb(38, 38, 128);
+}
+.footer {
+  text-align: center;
+  width: 100%;
+  background-color: #e9e8e6;
 }
 
-.App-link {
-  color: #61dafb;
+.contact h4 {
+  padding-top: 2%;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
 }
-
-@keyframes App-logo-spin {
+.copyrights {
+  padding-top: 30px;
+}
+.footer span {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+.footer .design {
+  margin-top: 1rem;
+  padding-bottom: 5rem;
+}
+.footer .design span {
+  color: rgb(30, 30, 118);
+}
+.footer .design span:hover {
+  cursor: pointer;
+}
+/* Fade-in animation for sections */
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container,
+.overview,
+.join-us,
+.skills,
+.applynow {
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Smooth transition for text */
+h2,
+p,
+ul {
+  transition: all 0.5s ease-in-out;
+}
+
+/* Button hover effect */
+.header button,
+.applynow button {
+  transition: 0.3s ease, transform 0.2s ease;
+}
+
+.header button:hover,
+.applynow button:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* Image slide-in effect */
+.overview .about,
+.join-us .join,
+.skills .qualification {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .header .title {
+    font-size: 55px;
+  }
+
+  .overview .about-content h2,
+  .join-us .join-content h2,
+  .skills .skill-content h2 {
+    font-size: 50px;
+  }
+
+  .overview .about-content p,
+  .join-us .join-content ul,
+  .skills .skill-content ul {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    padding-right: 8%;
+  }
+  .header {
+    background-color: rgba(108, 132, 160, 0.58);
+    width: 108%;
+  }
+  .header .title {
+    font-size: 45px;
+  }
+
+  .header button {
+    width: 25%;
+    font-size: 20px;
+  }
+
+  .overview,
+  .join-us,
+  .skills {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    width: 95%;
+    padding-right: 13%;
+  }
+
+  .overview .about,
+  .join-us .join,
+  .skills .qualification {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .overview .about-content,
+  .join-us .join-content,
+  .skills .skill-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .overview .about-content h2,
+  .join-us .join-content h2,
+  .skills .skill-content h2 {
+    font-size: 40px;
+  }
+  .points {
+    display: inline-block;
+    text-align: left;
+  }
+  .join-content .points {
+    margin-right: -17%;
+  }
+  .apply {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    padding-right: 8%;
+  }
+  .applynow {
+    width: 108%;
+  }
+  .applynow h2 {
+    font-size: 35px;
+  }
+
+  .applynow button {
+    font-size: 20px;
+    padding: 12px;
+  }
+  .footer {
+    width: 108%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header .cognifyz {
+    font-size: 40px;
+  }
+
+  .header .title {
+    font-size: 35px;
+  }
+
+  .header p {
+    font-size: 18px;
+  }
+
+  .header button {
+    width: 40%;
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .overview .about,
+  .join-us .join,
+  .skills .qualification {
+    height: 40%;
+  }
+
+  .overview .about-content h2,
+  .join-us .join-content h2,
+  .skills .skill-content h2 {
+    font-size: 35px;
+  }
+
+  .overview .about-content p,
+  .join-us .join-content ul,
+  .skills .skill-content ul {
+    font-size: 18px;
+  }
+  .join-content .points {
+    width: 85%;
+    margin-right: -20%;
+  }
+
+  .applynow h2 {
+    font-size: 30px;
+  }
+
+  .applynow button {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .footer span {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    padding-right: 12%;
+  }
+  .header {
+    background-color: rgba(108, 132, 160, 0.58);
+    width: 112%;
+  }
+
+  .header .cognifyz {
+    font-size: 35px;
+  }
+
+  .header .title {
+    font-size: 28px;
+  }
+
+  .header p {
+    font-size: 16px;
+  }
+
+  .header button {
+    width: 50%;
+    font-size: 16px;
+    padding: 15px;
+  }
+  .overview,
+  .join-us,
+  .skills {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    padding-right: 12%;
+  }
+
+  .overview .about,
+  .join-us .join,
+  .skills .qualification {
+    height: 35%;
+  }
+  .overview .about-content,
+  .join-us .join-content,
+  .skills .skill-content {
+    width: 100%;
+  }
+
+  .overview .about-content h2,
+  .join-us .join-content h2,
+  .skills .skill-content h2 {
+    font-size: 30px;
+  }
+
+  .overview .about-content p,
+  .join-us .join-content ul,
+  .skills .skill-content ul {
+    font-size: 16px;
+  }
+  .join-content .points {
+    margin-right: -5%;
+  }
+  .apply {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    padding-right: 12%;
+  }
+  .applynow {
+    width: 112%;
+  }
+  .applynow h2 {
+    font-size: 25px;
+  }
+
+  .applynow button {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .footer {
+    width: 112%;
+  }
+  .footer span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header .cognifyz {
+    font-size: 28px;
+  }
+
+  .header .title {
+    font-size: 24px;
+  }
+
+  .header button {
+    width: 60%;
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .overview .about,
+  .join-us .join,
+  .skills .qualification {
+    height: 30%;
+  }
+
+  .overview .about-content h2,
+  .join-us .join-content h2,
+  .skills .skill-content h2 {
+    font-size: 25px;
+  }
+
+  .overview .about-content p,
+  .join-us .join-content ul,
+  .skills .skill-content ul {
+    font-size: 14px;
+  }
+
+  .applynow h2 {
+    font-size: 20px;
+  }
+
+  .applynow button {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .footer span {
+    font-size: 12px;
   }
 }
